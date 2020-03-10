@@ -1,7 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "license": "MIT",
   "dependencies": {
     "babel-cli": "^6.26.0",
@@ -14,5 +14,8 @@
   "scripts": {
     "start": "nodemon src/index.js --ext js,gql,graphql --exec babel-node",
     "seed": "node seeder/drugs/drugs.js --exec babel-node"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
   }
 }
