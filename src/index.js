@@ -1,8 +1,10 @@
-import { GraphQLServer } from 'graphql-yoga';
-import { default as typeDefs } from '../types';
-import { default as resolvers } from '../resolvers';
+import '@babel/polyfill';
 
-import { model } from '../model';
+import { GraphQLServer } from 'graphql-yoga';
+import { default as typeDefs } from './types';
+import { default as resolvers } from './resolvers';
+
+import { model } from './model';
 
 const server = new GraphQLServer({
   typeDefs,
