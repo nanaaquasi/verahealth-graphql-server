@@ -1,0 +1,38 @@
+type Medication {
+  id: ID!
+  type: [String]
+  patient: Patient!
+  drugs: [Drug!]
+  hasTakenDrug: Boolean
+  dosage: [Dosage]
+}
+
+type Dosage {
+  duration: [String]
+  startDate: [String]
+  dosageUnit: [String]
+  dosageTimes: [String]
+}
+
+input CreateMedicationInput {
+  type: String
+  patient: ID!
+  drugs: [ID!]!
+  hasTakenDrug: Boolean
+  dosage: AddDosageInput
+}
+
+input AddDosageInput {
+  duration: [String]
+  startDate: String
+  dosageUnit: [String]
+  dosageTimes: [String]
+}
+
+type Query {
+  getMedications: [Medication!]!
+}
+
+type Mutation {
+  addMedication(input: CreateMedicationInput!): Medication
+}

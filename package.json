@@ -1,0 +1,18 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "graphql-yoga": "^1.18.3",
+    "merge-graphql-schemas": "^1.7.6",
+    "mongoose": "^5.9.3"
+  },
+  "scripts": {
+    "start": "nodemon src/index.js --ext js,gql,graphql --exec babel-node",
+    "seed": "node seeder/drugs/drugs.js --exec babel-node"
+  }
+}
