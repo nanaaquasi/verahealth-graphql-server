@@ -4,7 +4,7 @@ const url =
   'mongodb+srv://verahealth:password1234@cluster0-xvsvo.mongodb.net/verahealth?retryWrites=true&w=majority';
 
 mongoose
-  .connect(url || process.env.MONGO_URL, {
+  .connect(process.env.MONGO_URL || url, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false
