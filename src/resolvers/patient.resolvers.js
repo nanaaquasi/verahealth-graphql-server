@@ -26,9 +26,9 @@ export default {
           ...input
         };
 
-        const patient = await model.Patient.findOne(data);
+        const patientExists = await model.Patient.findOne(data);
 
-        if (patient) {
+        if (patientExists) {
           throw new Error('Patient already created');
         }
 
