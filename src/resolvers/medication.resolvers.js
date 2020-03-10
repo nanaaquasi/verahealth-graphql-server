@@ -4,7 +4,7 @@ export default {
       try {
         return await model.Medication.find({});
       } catch (error) {
-        throw new Error();
+        throw new Error(error);
       }
     }
   },

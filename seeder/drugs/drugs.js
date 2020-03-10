@@ -1,12 +1,15 @@
-const Drug = require('../../model/Drug');
+const Drug = require('../../src/model/Drug');
 const mongoose = require('mongoose');
 
 console.log(Drug);
 
-mongoose.connect('mongodb://localhost:27017/mediHealth', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+mongoose.connect(
+  'mongodb+srv://verahealth:password1234@cluster0-xvsvo.mongodb.net/verahealth?retryWrites=true&w=majority',
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  }
+);
 
 let drugs = [
   new Drug({
