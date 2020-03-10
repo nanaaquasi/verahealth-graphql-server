@@ -1,18 +1,26 @@
 export default {
   Query: {
     allDrugs: async (_, args, { model }) => {
-      const drugs = await model.Drug.find({});
+      try {
+        const drugs = await model.Drug.find({});
 
-      return drugs;
+        return drugs;
+      } catch (error) {
+        console.log(error);
+      }
     },
     drug: async (_, { id }, { model }) => {
-      const drug = await model.Drug.findOne({ _id: id });
+      try {
+        const drug = await model.Drug.findOne({ _id: id });
 
-      if (!drug) {
-        throw new Error('Drug does not exist');
+        if (!drug) {
+          throw new Error('Drug does not exist');
+        }
+
+        return drug;
+      } catch (error) {
+        console.log(error);
       }
-
-      return drug;
     }
   }
 };

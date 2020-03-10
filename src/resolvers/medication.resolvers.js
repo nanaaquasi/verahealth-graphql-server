@@ -1,7 +1,11 @@
 export default {
   Query: {
     getMedications: async (_, args, { model }) => {
-      return await model.Medication.find({});
+      try {
+        return await model.Medication.find({});
+      } catch (error) {
+        throw new Error();
+      }
     }
   },
   Mutation: {

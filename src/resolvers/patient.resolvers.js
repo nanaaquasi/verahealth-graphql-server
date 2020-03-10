@@ -1,36 +1,39 @@
 export default {
   Query: {
     patient: async (_, { id }, { model }) => {
-      const patient = await model.Patient.findById(id);
+      try {
+        const patient = await model.Patient.findById(id);
 
-      console.log('Resolved', patient);
-
-      return patient;
+        return patient;
+      } catch (error) {
+        throw new Error(error);
+      }
     },
     patients: async (_, args, { model }) => {
-      const patients = await model.Patient.find({});
+      try {
+        const patients = await model.Patient.find({});
 
-      return patients;
+        return patients;
+      } catch (error) {
+        throw new Error(error);
+      }
     }
   },
   Mutation: {
     addPatient: async (_, { input }, { model }) => {
-      const data = {
-        ...input
-      };
-
-      const patient = await model.Patient.findOne(data);
-
-      if (patient) {
-        throw new Error('Patient already created');
-      }
-
-      const newPatient = new model.Patient(data);
-
       try {
-        const patient = await newPatient.save();
+        const data = {
+          ...input
+        };
 
-        console.log('Created', patient);
+        const patient = await model.Patient.findOne(data);
+
+        if (patient) {
+          throw new Error('Patient already created');
+        }
+
+        const newPatient = new model.Patient(data);
+        const patient = await newPatient.save();
 
         return patient;
       } catch (error) {
@@ -41,17 +44,12 @@ export default {
       try {
         const patientToDelete = await model.Patient.findOne({ _id: id });
 
-        console.log('To Delete', patientToDelete);
-
         if (!patientToDelete) {
           throw new Error('Patient does not exist');
         }
         const patient = await model.Patient.findOneAndRemove({ _id: id });
 
         // await patient.save();
-
-        console.log('Deleted', patient);
-
         return patient;
       } catch (error) {
         throw new Error(error);
