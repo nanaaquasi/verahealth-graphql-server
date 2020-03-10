@@ -12,7 +12,7 @@
     "mongoose": "^5.9.3"
   },
   "scripts": {
-    "start": "nodemon src/index.js --ext js,gql,graphql --exec babel-node",
+    "start": "node src/index.js --ext js,gql,graphql --exec babel-node",
     "seed": "node seeder/drugs/drugs.js --exec babel-node",
     "nodemon": "nodemon"
   },
