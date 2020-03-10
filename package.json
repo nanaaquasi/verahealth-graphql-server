@@ -13,7 +13,8 @@
   },
   "scripts": {
     "start": "nodemon src/index.js --ext js,gql,graphql --exec babel-node",
-    "seed": "node seeder/drugs/drugs.js --exec babel-node"
+    "seed": "node seeder/drugs/drugs.js --exec babel-node",
+    "nodemon": "nodemon"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
