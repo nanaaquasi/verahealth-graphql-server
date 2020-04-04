@@ -12,7 +12,7 @@ type Drug {
 type DosageInfo {
   info: String
   overdoseInfo: String
-  howTo: String
+  howTo: [String]
   dosageMiss: String
 }
 

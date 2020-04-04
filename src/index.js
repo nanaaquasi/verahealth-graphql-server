@@ -18,7 +18,7 @@ const options = {
   cors: {
     origin: true
   },
-  port: process.env.PORT || 6000
+  port: process.env.PORT || 8080
 };
 
 require('./db');
