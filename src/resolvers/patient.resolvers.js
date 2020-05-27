@@ -25,7 +25,10 @@ export default {
     addPatient: async (_, { input }, { model }) => {
       try {
         const data = {
-          hospitalId: `VH-${input.name.slice(0, 3)}-${input.sex.slice(0, 1)}`,
+          hospitalId: `VH-${input.name.slice(0, 3)}-${input.sex.slice(
+            0,
+            1
+          )}00${Math.floor(Math.random() * 99 + 1)}`,
           ...input,
         };
 
