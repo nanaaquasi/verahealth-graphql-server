@@ -1,5 +1,6 @@
 type Patient {
   id: ID!
+  hospitalId: String!
   name: String
   age: Int
   contact: String
@@ -18,7 +19,7 @@ type Emergency {
 }
 
 type Query {
-  patient(id: ID!): Patient
+  patient(id: String!): Patient
   patients: [Patient!]
 }
 
@@ -35,7 +36,7 @@ input updatePatientInput {
   name: String
   age: Int
   contact: String
-  sex: String
+  sex: String!
   emergency: emergencyInput
 }
 

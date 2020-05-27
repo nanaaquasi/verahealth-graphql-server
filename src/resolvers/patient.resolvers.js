@@ -2,7 +2,9 @@ export default {
   Query: {
     patient: async (_, { id }, { model }) => {
       try {
-        const patient = await model.Patient.findById(id);
+        const patient = await model.Patient.findOne({ hospitalId: id });
+
+        console.log(patient);
 
         return patient;
       } catch (error) {
@@ -17,13 +19,14 @@ export default {
       } catch (error) {
         throw new Error(error);
       }
-    }
+    },
   },
   Mutation: {
     addPatient: async (_, { input }, { model }) => {
       try {
         const data = {
-          ...input
+          hospitalId: `VH-${input.name.slice(0, 3)}-${input.sex.slice(0, 1)}`,
+          ...input,
         };
 
         const patientExists = await model.Patient.findOne(data);
@@ -77,6 +80,6 @@ export default {
       } catch (error) {
         throw new Error(error);
       }
-    }
-  }
+    },
+  },
 };

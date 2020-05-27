@@ -63,6 +63,106 @@ let drugs = [
   }),
   new Drug({
     NDC_Code: '',
+    name: 'Citalopram (Celexa)',
+    overview:
+      'Citalopram is an antidepressant medication that affects neurotransmitters, the chemicals that nerves within the brain use to communicate with each other',
+    drugInfo: {
+      importantInfo:
+        'Anyone considering the use of citalopram or any other antidepressant in a child or adolescent must balance this risk with the clinical need. Patients who are started on therapy should be closely observed for clinical worsening, suicidality, or unusual changes in behavior.',
+      caution: [
+        'Before taking citalopram, tell your doctor or pharmacist if you are allergic to it; or to escitalopram; or if you have any other allergies. This product may contain inactive ingredients, which can cause allergic reactions or other problems. Talk to your pharmacist for more details.',
+        ,
+        ' Citalopram may cause a condition that affects the heart rhythm (QT prolongation). QT prolongation can rarely cause serious (rarely fatal) fast/irregular heartbeat and other symptoms (such as severe dizziness, fainting) that need medical attention right away.'
+      ],
+      furtherInfo:
+        'Remember, keep this and all other medicines out of the reach of children, never share your medicines with others, and use this medication only for the indication prescribed.',
+      interactionsInfo: [
+        'Some products that may interact with this drug include: other drugs that can cause bleeding/bruising (including antiplatelet drugs such as clopidogrel, NSAIDs such as ibuprofen, "blood thinners" such as warfarin).'
+      ],
+      avoidance: "Citalopram is excreted in breast milk. Breastfeeding by a citalopram treated woman may cause adverse effects in the infant.",
+      sideEffects: {
+        info:
+          'Get emergency medical help if you have any of these signs of an allergic reaction to paracetamol: hives; difficulty breathing; swelling of your face, lips, tongue, or throat',
+        effects: [
+          'nausea, dry mouth',
+          'vomiting, excessive sweating',
+          'sexual dysfunction',
+          'inability to sleep.',
+          'headache, tremor'
+        ]
+      }
+    },
+    imageUrl: [
+      'https://5.imimg.com/data5/MO/HZ/CF/SELLER-97053998/citalopram-tablet-250x250.jpg',
+      'https://img.medscapestatic.com/pi/features/drugdirectory/octupdate/PKD40400.jpg'
+    ],
+    url: 'https://www.webmd.com/drugs/2/drug-8603/celexa-oral/details',
+    dosage: {
+      info:
+        'The starting dose is 20 mg in the morning or evening daily. The dose may be increased to 40 mg daily after one week',
+      overdoseInfo:
+        'If you have serious symptoms such as passing out or trouble breathing, call 911',
+      howTo: [
+        'Take this medication with or without food as directed by your doctor, usually once daily in the morning or evening.',
+        'If you are using the liquid form of this medication, carefully measure the dose using a special measuring device/spoon. Do not use a household spoon because you may not get the correct dose.',
+		'It may take 1 to 4 weeks to feel a benefit from this drug and up to several weeks before you get the full benefit. Tell your doctor if your condition does not improve or if it worsens..'
+      ],
+      dosageMiss:
+        'If you miss a dose, take it as soon as you remember. If it is near the time of the next dose, skip the missed dose. Take your next dose at the regular time. Do not double the dose to catch up.'
+    }
+  }),
+  new Drug({
+    NDC_Code: '',
+    name: 'Hydrochlorothiazide (Microzide, Hydrodiuril)',
+    overview:
+      'This medication is used to treat high blood pressure. Lowering high blood pressure helps prevent strokes, heart attacks, and kidney problems.',
+    drugInfo: {
+      importantInfo:
+        'Before using this medication, tell your doctor or pharmacist your medical history, especially of: diabetes, gout, kidney disease, liver disease, lupus, skin cancer.',
+      caution: [
+        'This drug may make you dizzy. Alcohol or marijuana (cannabis) can make you more dizzy. Do not drive, use machinery, or do anything that needs alertness until you can do it safely. Limit alcoholic beverages. Talk to your doctor if you are using marijuana (cannabis).',
+        'If you have diabetes, hydrochlorothiazide may affect your blood sugar. Check your blood sugar regularly as directed by your doctor. Your doctor may need to adjust your diabetes medication, exercise program, or diet.'
+      ],
+      furtherInfo:
+        'Remember, keep this and all other medicines out of the reach of children, never share your medicines with others, and use this medication only for the indication prescribed.',
+      interactionsInfo: [
+        'Some products that may interact with this drug include: dofetilide, lithium.'
+      ],
+      avoidance: "Avoid Drinking alcohol as it can increase certain side effects",
+      sideEffects: {
+        info:
+          'Get emergency medical help if you have any of these signs of an allergic reaction to paracetamol: hives; difficulty breathing; swelling of your face, lips, tongue, or throat',
+        effects: [
+          'eye pain, vision problems',
+          'dry mouth, thirst, nausea, vomiting',
+          'muscle pain or weakness',
+          'nausea, stomach pain, low feverc',
+          'feeling weak, drowsy, restless, or light-headed'
+        ]
+      }
+    },
+    imageUrl: [
+      'https://www.crescentpharma.com/wp-content/uploads/2018/04/Losartan-Potassium-Hydrochlorothiazide-100mg-25mg.png',
+      'https://img.medscapestatic.com/pi/features/drugdirectory/octupdate/UNC01280.jpg'
+    ],
+    url: 'https://www.drugs.com/hctz.html',
+    dosage: {
+      info:
+        'The starting dose is 20 mg in the morning or evening daily. The dose may be increased to 40 mg daily after one week',
+      overdoseInfo:
+        'If you have serious symptoms such as passing out or trouble breathing, call 911',
+      howTo: [
+        'Take this medication by mouth as directed by your doctor, usually once daily in the morning with or without food',
+        ' If you take this drug too close to bedtime, you may need to wake up to urinate. It is best to take this medication at least 4 hours before your bedtime.',
+		'To help you remember, take it at the same time each day.'
+      ],
+      dosageMiss:
+        'Seek emergency medical attention or call the Poison Help line at 1-800-222-1222. Overdose symptoms may include nausea, weakness, dizziness, dry mouth'
+    }
+  }),
+  
+  new Drug({
+    NDC_Code: '',
     name: 'Lisinopril',
     overview:
       'Lisinopril is an ACE inhibitor used to treat high blood pressure (hypertension) in adults and children who are at least 6 years old.',
@@ -152,7 +252,7 @@ let drugs = [
     url: 'https://www.drugs.com/ciprofloxacin.html',
     dosage: {
       info:
-        'Take lisinopril exactly as prescribed by your doctor. Follow all directions on your prescription label.You may take ciprofloxacin with or without food, at the same time each day',
+        'Take ciprofloxacin exactly as prescribed by your doctor. Follow all directions on your prescription label.You may take ciprofloxacin with or without food, at the same time each day',
       overdoseInfo: `Seek emergency medical attention or call the Poison Help line at 1-800-222-1222`,
       howTo: [
         `Shake the oral suspension (liquid) for 15 seconds before you measure a dose. Use the dosing syringe provided, or use a medicine dose-measuring device (not a kitchen spoon). Do not give ciprofloxacin oral suspension through a feeding tube`,
@@ -213,65 +313,6 @@ let drugs = [
         `Shake the oral suspension (liquid) before you measure a dose`,
         'Measure liquid medicine with the dosing syringe provided, or use a medicine dose-measuring device (not a kitchen spoon). You may mix the liquid with water, milk, baby formula, fruit juice, or ginger ale. Drink all of the mixture right away. Do not save for later use.',
         'Store at room temperature away from moisture, heat, and light.You may store liquid amoxicillin in a refrigerator but do not allow it to freeze. Throw away any liquid mediicne that is not used within 14 days after it was mixed at the pharmacy.'
-      ],
-      dosageMiss: `Take the missed dose as soon as you remember. Skip the missed dose if it is almost time for your next scheduled dose. Do not take two doses at one time.`
-    }
-  }),
-  new Drug({
-    NDC_Code: '',
-    name: 'Hydrochlorothiazide',
-    overview: `Hydrochlorothiazide is a thiazide diuretic (water pill) that helps prevent your body from absorbing too much salt, which can cause fluid retention.
-
-      Hydrochlorothiazide is used to treat high blood pressure (hypertension).`,
-    drugInfo: {
-      importantInfo: `You should not use hydrochlorothiazide if you are unable to urinate.
-
-      Before using hydrochlorothiazide, tell your doctor if you have liver disease, kidney disease, glaucoma, asthma or allergies, gout, diabetes, or if you are allergic to sulfa drugs or penicillin.
-      
-      Avoid drinking alcohol, which can increase some of the side effects of this medicine.`,
-      caution: [
-        `If you are being treated for high blood pressure, keep using hydrochlorothiazide even if you feel fine. High blood pressure often has no symptoms..
-       `,
-        `To make sure hydrochlorothiazide is safe for you, tell your doctor if you have: kidney disease, liver disease, gout, glaucoma or low levels of potassium or sodium in your blood`,
-        `Hydrochlorothiazide is not expected to be harmful to an unborn baby. However, if you take this medicine during pregnancy, your newborn baby may develop jaundice or other problems.`,
-        `To make sure this medicine is safe for you, Tell your doctor if you are pregnant or plan to become pregnant while taking hydrochlorothiazide.
-
-        Hydrochlorothiazide can pass into breast milk and may harm a nursing baby. You should not breast-feed while using this medicine 
-        `
-      ],
-      furtherInfo: `Remember, keep this and all other medicines out of the reach of children, never share your medicines with others, and use this medication only for the indication prescribed.`,
-      interactionsInfo: [
-        `cholestyramine, colestipol`,
-        'insulin or oral diabetes medicine',
-        'other blood pressure medications',
-        'steroid medicine'
-      ],
-      avoidance: `Drinking alcohol with this medicine can cause side effects.
-      Avoid becoming overheated or dehydrated during exercise, in hot weather, or by not drinking enough fluids. Follow your doctor's instructions about the type and amount of liquids you should drink. In some cases, drinking too much liquid can be as unsafe as not drinking enough.`,
-      sideEffects: {
-        info: `Get emergency medical help if you have signs of an allergic reaction to hydrochlorothiazide: hives; difficulty breathing; swelling of your face, lips, tongue, or throat.`,
-        effects: [
-          'a light-headed feeling, like you might pass out',
-          'pale skin, easy bruising, unusual bleeding (nose, mouth, vagina, or rectum)',
-          'signs of electrolyte imbalance--dry mouth, thirst, drowsiness, lack of energy, restlessness, muscle pain or weakness, fast heart rate, nausea and vomiting, little or no urine',
-          'nausea, vomiting, diarrhea, stomach pain'
-        ]
-      }
-    },
-    imageUrl: [
-      'https://www.drugs.com/images/pills/fio/HER00080.JPG',
-      'https://www.drugs.com/images/pills/fio/UNI01280.JPG'
-    ],
-    url: 'https://www.drugs.com/hydrochlorothiazide.html',
-    dosage: {
-      info: `Hydrochlorothiazide is usually taken 25 mg to 100 mg orally once per day. Follow your doctor's dosing instructions very carefully.
-        `,
-      overdoseInfo: `Seek emergency medical attention or call the Poison Help line at 1-800-222-1222
-        Overdose symptoms may include nausea, weakness, dizziness, dry mouth, thirst, and muscle pain or weakness`,
-      howTo: [
-        `Keep using this medicine as directed, even if you feel well. High blood pressure often has no symptoms. You may need to use blood pressure medicine for the rest of your life`,
-        'While using hydrochlorothiazide, you may need frequent medical tests and blood pressure checks. Your blood and urine may both be tested if you have been vomiting or are dehydrated.',
-        'Store hydrochlorothiazide at room temperature away from moisture, heat, and freezing. Keep the bottle tightly closed when not in use.'
       ],
       dosageMiss: `Take the missed dose as soon as you remember. Skip the missed dose if it is almost time for your next scheduled dose. Do not take two doses at one time.`
     }

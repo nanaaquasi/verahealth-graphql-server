@@ -4,40 +4,44 @@ const patientSchema = new Schema(
   {
     name: {
       type: String,
-      required: true
+      required: true,
+    },
+    hospitalId: {
+      type: String,
+      default: 'VH-VH-M',
     },
     address: String,
     email: String,
     age: {
       type: Number,
-      required: true
+      required: true,
     },
     contact: {
-      type: String
+      type: String,
     },
     sex: String,
     emergency: [
       {
         contactName: String,
         contactPhone: String,
-        relationship: String
-      }
-    ]
+        relationship: String,
+      },
+    ],
   },
   {
     timestamps: true,
     toJSON: { virtuals: true },
-    toObject: { virtuals: true }
+    toObject: { virtuals: true },
   }
 );
 
 patientSchema.virtual('medications', {
   ref: 'Medication',
   foreignField: 'patient',
-  localField: '_id'
+  localField: '_id',
 });
 
-patientSchema.pre(/^find/, function(next) {
+patientSchema.pre(/^find/, function (next) {
   this.populate({ path: 'medications' }).populate('drugs');
   next();
 });
